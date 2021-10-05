@@ -22,14 +22,14 @@ button{
 
 #searchlist{
     display: flex;
-    margin-top: 10px;
-    width: 70%;
-    border: chocolate solid 1px;
+    margin-top: 10%;
+    width: 80%;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-left: 15%;
+    margin-left: 10%;
     flex-wrap: wrap;
+    
 
 }
 
