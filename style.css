@@ -10,11 +10,6 @@ aside {
     justify-content: center;
 } */
 
-
-main {
-    background-color: burlywood;
-    height: 100vh;
-}
 button{
     background-color: rgb(82, 156, 206);
     margin-bottom: 10px;
@@ -58,6 +53,72 @@ input{
 .searched:active{
     background-color: red;
 }
+
+main {
+    background-color: burlywood;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-container{
+    margin-top: 10%;
+    border: black solid 1px;
+    min-height: 35%;
+    width: 100%;
+    position: relative;
+}
+
+#currentTitle{
+    margin-left: 5%;
+    margin-top: 5%;
+    border: blue solid 1px;
+    width: 70%;
+    
+}
+
+#currentList{
+    margin-left: 5%;
+    margin-top:10px;
+    border: blue solid 1px;
+}
+
+#weathericon{
+    border: blueviolet solid 1px;
+    display: inline-block;
+    position:absolute;
+    right:5%;
+    top:10%;
+}
+
+#uvLow{
+    background-color: green;
+}
+
+#uvModerate{
+    background-color: yellow;
+}
+
+#uvHigh{
+    background-color: orange;
+}
+
+#uvVeryhigh{
+    background-color: red;
+}
+
+#uvExtreme{
+    background-color: violet;
+}
+
+.listitems{
+    margin-top:5px;
+}
+
+
+
+
 
 @media screen and (max-width: 767px) {
 
