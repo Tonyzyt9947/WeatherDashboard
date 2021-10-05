@@ -1,6 +1,6 @@
 aside {
     background-color: bisque;
-    height: 100vh;
+    min-height:100vh;
     text-align: center;
 }
 
@@ -18,12 +18,14 @@ button{
 #searchlist{
     display: flex;
     margin-top: 10%;
+    margin-bottom: 10%;
     width: 80%;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin-left: 10%;
     flex-wrap: wrap;
+    
     
 
 }
@@ -56,14 +58,14 @@ input{
 
 main {
     background-color: burlywood;
-    height: 100vh;
+    min-height:100vh;
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
 .main-container{
-    margin-top: 10%;
+    margin-top: 5%;
     border: black solid 1px;
     min-height: 35%;
     width: 100%;
@@ -72,7 +74,7 @@ main {
 
 #currentTitle{
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 10px;
     border: blue solid 1px;
     width: 70%;
     
@@ -89,34 +91,85 @@ main {
     display: inline-block;
     position:absolute;
     right:5%;
-    top:10%;
+    top:10px;
 }
 
 #uvLow{
     background-color: green;
+    border-radius: 10px;
 }
 
 #uvModerate{
     background-color: yellow;
+    border-radius: 10px;
 }
 
 #uvHigh{
     background-color: orange;
+    border-radius: 10px;
 }
 
 #uvVeryhigh{
     background-color: red;
+    border-radius: 10px;
 }
 
 #uvExtreme{
     background-color: violet;
+    border-radius: 10px;
 }
 
-.listitems{
+
+li{
     margin-top:5px;
+    font-size: 150%;
+}
+
+#forecastTitle{
+    margin-left: 2%;
+    width: 100%;
+    border: black solid 1px;
 }
 
 
+.forecastcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cardcontainer{
+    display: inline-block;
+    width: 15%;
+}
+
+.foreCard{
+    border-radius: 10px;
+    height: 200px;
+    background-color: rgb(79, 142, 236);
+}
+
+.foreDate{
+    margin-left:2%;
+    color: white;
+}
+
+.foreTemp{
+    margin-left:2%;
+    margin-top: 2%;
+    color: white;
+}
+
+.foreIcon{
+    margin-left:2%;
+    margin-top: 2%
+}
+
+.foreHum{
+    margin-left:2%;
+    margin-top: 2%;
+    color: white;
+}
 
 
 

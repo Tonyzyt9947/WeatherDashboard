@@ -75,7 +75,7 @@ function oneCall(url){
 
             return OCresponse.json();
 
-    })
+        })
         .then(function (data) {
             console.log("onecall", data)
             
@@ -88,7 +88,7 @@ function oneCall(url){
             currentIcon.setAttribute("src", weatherIcon)
             
             
-            tempC = parseFloat(data.current.temp)-271
+            var tempC = parseFloat(data.current.temp)-271
             tempText.textContent = "Temperature: " + tempC.toFixed(2)+"\u00B0C"
             
             humidText.textContent = "Humidity: " +data.current.humidity + "%"
@@ -122,9 +122,34 @@ function oneCall(url){
             currentList.appendChild(windText)
             currentList.appendChild(uvText)
 
+            var foreDateText = document.getElementsByClassName("foreDate")
+            var foreIconSrc = document.getElementsByClassName("foreIcon")
+            var foreTempText = document.getElementsByClassName("foreTemp")
+            var foreHumText = document.getElementsByClassName("foreHum")
+            console.log(foreIconSrc)
+
+            for (i=0;i<foreDateText.length;i++){
+                foreDateText[i].textContent = moment.unix(data.daily[i+1].dt).format("MMM Do YYYY")
+            }
+
+            for (i=0;i<foreIconSrc.length;i++){
+
+                var iconIndex = "http://openweathermap.org/img/w/"+data.daily[i+1].weather[0].icon+".png" 
+                foreIconSrc[i].setAttribute("src", iconIndex)
+            }
+
+            for (i=0;i<foreTempText.length;i++){
+                
+                var tempCel = parseFloat(data.daily[i+1].temp.day)-271
+                foreTempText[i].textContent = "Temp: "+tempCel.toFixed(2)+"\u00B0C"
+
+            }
             
+            for (i=0;i<foreHumText.length;i++){
+                console.log(data.daily[i+1].humidity)
+                foreHumText[i].textContent = "Humidity: "+ data.daily[i+1].humidity+"%"
+            }
                 
                 
-                
-    })
+        })
 }
