@@ -27,6 +27,9 @@ button{
     border: chocolate solid 1px;
     text-align: center;
     align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+    flex-wrap: wrap;
 
 }
 
@@ -38,13 +41,22 @@ input{
 .searched{
     text-align: center;
     background-color: cornsilk;
-    opacity: 0.5;
+    border: grey solid 1px;
+    opacity: 0.7;
+    width: 100%;
+    display: block;
 
 }
 
 .searched:hover{
     opacity: 1;
     border:black solid 1px;
+    box-shadow:5px 5px 10px white,-5px -5px 10px white;
+    transition: 0.5s;
+}
+
+.searched:active{
+    background-color: red;
 }
 
 @media screen and (max-width: 767px) {
