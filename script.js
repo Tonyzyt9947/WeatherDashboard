@@ -1,12 +1,12 @@
+// Selecting html elements for edit
 var searchList = document.getElementById("searchlist")
-
 var tempText = document.createElement("li")
 var humidText = document.createElement("li")
 var windText = document.createElement("li")
 var uvText = document.createElement("li")
 
 
-
+// Search from search history: calls display function
 function pastSearch(location){
     console.log("1")
     
@@ -17,6 +17,7 @@ function pastSearch(location){
 
 }
 
+// Search from input bar: calls display function and creates search history
 function searchInput(){
 
 
@@ -42,6 +43,7 @@ function searchInput(){
 
 }
 
+// The function that displays data on dashboards, calls the main function oneCall()
 function Display(url){
 
     fetch(url)
@@ -67,6 +69,7 @@ function Display(url){
         })
 }
 
+// Main data retrieving and displaying function
 function oneCall(url){
 
     fetch(url)
